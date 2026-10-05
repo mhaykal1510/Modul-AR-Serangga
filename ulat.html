@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AR Ulat Lepidoptera</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#eef7e8, #ffffff);
+      text-align: center;
+    }
+
+    h1 {
+      color: #3d6b35;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #555;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 70vh;
+      background-color: transparent;
+    }
+
+    #ar-button {
+      background-color: #3d6b35;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ulat Lepidoptera</h1>
+
+  <p>
+    Putarkan model 3D untuk melihat serangga dari pelbagai sudut.
+  </p>
+
+  <model-viewer
+    src="ulat-blender.glb"
+    alt="Model 3D ulat Lepidoptera"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1">
+
+    <button slot="ar-button" id="ar-button">
+      📱 LIHAT DALAM AR
+    </button>
+
+  </model-viewer>
+
+</body>
+</html>
